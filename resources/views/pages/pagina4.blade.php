@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.app-pages')
 
 @section('title', 'Index')
 
 
 @section('content')
-    <p>Contenido de la pagina</p>
+
 @endsection
