@@ -22,11 +22,6 @@ class CreateProjectsTable extends Migration
             $table->string('img_03');
             $table->string('img_04');
             $table->string('img_05');
-            $table->string('img_06');
-            $table->string('img_07');
-            $table->string('img_08');
-            $table->string('plans_01');
-            $table->string('plans_02');
             $table->string('description');
             $table->string('type');
             $table->string('status');

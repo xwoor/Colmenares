@@ -25,8 +25,9 @@ class HomeController extends Controller
     {
         return view('admin.home');
     }
-    public function section1()
+    public function create()
     {
-        return view('admin.section1');
+        return view('admin.agregar-producto');
     }
+
 }

@@ -18,5 +18,5 @@ Route::get('/pagina3', 'UserController@pagina3');
 Route::get('/pagina4', 'UserController@pagina4');
 
 Auth::routes();
-Route::get('/admin', 'HomeController@index')->name('home');
-Route::get('/section1', 'HomeController@section1')->name('section1');
+Route::resource('/admin', 'RestController');
+Route::get('agregar-producto','HomeController@create');
