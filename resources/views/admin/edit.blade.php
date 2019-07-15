@@ -4,76 +4,53 @@
 
 
 @section('content')
+
+
 <div class="container">
-    <div class="row">
-      <h2 class="text-center">Editar producto</h2><hr>
-        <form action="/admin/{{ $datos->id }}" method="POST"  >
+    <div class="container">
+        <div class="row">
+        <h4>Editar Publicación</h4>
+
+       <div class="col col-md-2"></div>
+          <div class="col col-md-8">
+          <form action="/admin/{{$post->id}}" method="POST" enctype="multipart/form-data">
           @csrf
-          @method('PATCH')
-            <div class="form-group col-md-6">
-              <label for="">Nombre del proyecto</label>
-              <input type="text" name="project_title"  class="form-control" value="{{ $datos->project_title }}" required>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="">Localización</label>
-              <input type="text" name="location"  class="form-control"  value="{{ $datos->location }}" required>
-            </div>   
-            <div class="form-group col-md-12">
-              <label for="">Descripción</label>
-              <textarea class="form-control" name="description"  rows="3">{{ $datos->project_title }}</textarea>
-            </div>
-
-            <div class="form-group col-md-3">
-              <label for="">Tipo de Producto</label>
-              <select class="form-control" name="type">
-                  <option name="tipe_1">Tipo 1</option>
-                  <option name="tipe_2">Tipo 2</option>
-                  <option name="tipe_3">Tipo 3</option>
-              </select>
-            </div>
-            <div class="form-group col-md-3">
-            <label for="">Estado de Producto</label>
-            <select class="form-control" name="status">
-                <option name="activo">Activo</option>
-                <option name="inactivo">Inactivo</option>
-            </select>
-            </div>
+          @method('PUT')
+        <div class="form-group required">
+          <label class='control-label'>Nombre</label>
+        <input type="text" class="form-control" name="name" placeholder="Publicación numero" value="{{$post->name}}">
+          
         </div>
-            <button type="submit" class="btn btn-primary">Actualizar Producto</button>
-        </form>
-      </div> <hr>
-      <h2 class="text-center">Imagenes</h2><hr>
-        <div class="row">     
-
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <img src="{{ asset('images/'.$datos->img_01)}}" width="100%" >
-                  </div>
-                  <div class="carousel-item">
-                      <img src="{{ asset('images/'.$datos->img_02)}}" width="100%" >
-                  </div>
-                  <div class="carousel-item">
-                      <img src="{{ asset('images/'.$datos->img_03)}}" width="100%" >
-                  </div>
-                  <div class="carousel-item">
-                      <img src="{{ asset('images/'.$datos->img_04)}}" width="100%" >
-                  </div>
-                  <div class="carousel-item">
-                      <img src="{{ asset('images/'.$datos->img_05)}}" width="100%" >
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
+        <div class="form-group required">
+          <label  class='control-label'>Slug</label>
+          <input type="text" class="form-control" name="slug" placeholder="publicacion-numero" value="{{$post->slug}}">
+        </div>
+        <div class="form-group required">
+          <label  class='control-label' >Status</label>
+          <select class="form-control" name="status">
+            <option>PUBLISHED</option>
+            <option selected>DRAFT</option>
+          </select>
         </div>
         
-    </div>
-
+        <div class="form-group required">
+          <label  class='control-label'>Descripción</label>
+          <textarea class="form-control" name="excerpt" rows="3">{{$post->excerpt}}</textarea>
+        </div>
+        <div class="form-group required">
+          <label  class='control-label'>Post</label>
+          <textarea class="form-control" name="body"  rows="8">{{$post->body}}</textarea>
+        </div>
+      
+       
+          <ul class="media-date text-uppercase reviews list-inline">
+          <li class="aaaa"><button type="submit" class="btn btn-success">Guardar</button></li>
+        </ul>
+      </form>
+      <a href="/admin" class="btn btn-danger">Cancelar</a>
+      </div>
+        <div class="col col-md-2"></div>
+      
+      </div>
+      </div>
 @endsection

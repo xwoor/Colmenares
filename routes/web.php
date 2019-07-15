@@ -12,11 +12,13 @@
 */
 
 Route::get('/', 'UserController@index');
-Route::get('/pagina1', 'UserController@pagina1');
-Route::get('/pagina2', 'UserController@pagina2');
-Route::get('/pagina3', 'UserController@pagina3');
-Route::get('/pagina4', 'UserController@pagina4');
+Route::get('quienes-somos', 'UserController@pagina1');
+Route::get('servicios', 'UserController@pagina2');
+Route::get('publicaciones', 'UserController@pagina3');
+Route::get('contacto', 'UserController@pagina4');
+Route::get('publicacion/{slug}','UserController@post')->name('post');
 
 Auth::routes();
-Route::resource('/admin', 'RestController');
-Route::get('agregar-producto','HomeController@create');
+Route::resource('admin', 'RestController');
+Route::get('agregar','RestController@create');
+Route::post('mail','UserController@mail');

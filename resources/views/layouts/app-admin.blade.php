@@ -27,7 +27,10 @@
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="{{ asset('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/dropdown.css') }}">
+
+
   <script src=" {{ asset('js/dropzone.js') }}"></script>
+
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -91,11 +94,11 @@
                   <!-- sidebar menu: : style can be found in sidebar.less -->
                   <ul class="sidebar-menu" data-widget="tree">
                     <li class="{{ Request::is('admin') ? 'active' : ''}}">
-                        <a href="/admin"><i class="fa fa-dashboard"></i> <span>Inicio</span>
+                        <a href="/admin"><i class="fa fa-dashboard"></i> <span>Publicaciones</span>
                         </a>
                     </li>
-                    <li class="{{ Request::is('agregar-producto') ? 'active' : ''}}">
-                        <a href="/agregar-producto"><i class="fa fa-plus-square"></i> <span>Agregar Producto</span>
+                    <li class="{{ Request::is('agregar') ? 'active' : ''}}">
+                        <a href="/agregar"><i class="fa fa-plus-square"></i> <span>Agregar Publicación</span>
                         </a>
                     </li>
                   </ul>
@@ -151,5 +154,11 @@
     <script src=" {{ asset('dist/js/pages/dashboard.js') }}"></script>
     <!-- AdminLTE for demo purposes -->
     <script src=" {{ asset('dist/js/demo.js') }}"></script>
+    <script src="{{asset('vendor/ckeditor/ckeditor.js')}}"></script>
+    <script>
+      CKEDITOR.config.height = 400;
+      CKEDITOR.config.width = 'auto';
+      CKEDITOR.replace('body');
+      </script>
 </body>
 </html>
