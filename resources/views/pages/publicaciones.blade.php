@@ -34,6 +34,9 @@
                       </div>        
         @endforeach
 </div></section>
-{{ $datos->render() }}
+<div class="mb-4">
+
+  {{ $datos->render() }}
+</div>
 </div> 
 @endsection

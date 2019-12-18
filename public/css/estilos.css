@@ -4,14 +4,14 @@
     src: url('../font/comfortaa-regular.ttf') format('truetype');
 }
 *{
-    font-family: 'comfortaa';
+    font-family: 'comfortaa' !important;
 }
 @font-face{
     font-family: 'KeepCalm-Medium';
     src: url('../font/KeepCalm-Medium.ttf') format('truetype');
 }
 h1,h2,h3,h4{
-    font-family: 'KeepCalm-Medium';
+    font-family: 'KeepCalm-Medium' !important;
 }
 .nav-item{
 	text-transform: uppercase;
@@ -19,9 +19,10 @@ h1,h2,h3,h4{
 
 /* TIPOGRAFIA */
 /* ESTILOS POST */
-
+.logo-brand{
+	height: 70px !important;
+}
 .txt-orange {
- 
  text-shadow: 5px 5px 5px black;
 }
 .txt-post {
@@ -67,11 +68,24 @@ h1,h2,h3,h4{
 .carousel-caption{
     margin-bottom:22%;
 }
+.lg-br {	
+	height: 70px;
+}
 /* VISTA MOVI */
-@media only screen and (max-width: 600px) {
+@media(max-width: 600px){
+	
+		.lg-br {
+			height: 70px!important;
+			margin: 10px;
+			left: 5px;
+		}
+
     .carousel-caption{
         margin-bottom: 10%;
-    }
+	}
+	.logo-brand img{
+		height: 100px !important;
+	}
   }
 /* FIN MOVIL */
 

@@ -1,0 +1,37 @@
+@media only screen and (max-width: 767px)
+{
+	.header_content
+	{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.home_title
+	{
+		font-size: 56px;
+	}
+	.home_slider_dots_container
+	{
+		left: 30px;
+	}
+	.book_button
+	{
+		display: none;
+	}
+	.header_phone
+	{
+		display: none !important;
+	}
+	.menu_book
+	{
+		display: block;
+	}
+	.booking_form_container
+	{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.gallery_item
+	{
+		height: calc(100vw / 2);
+	}
+}

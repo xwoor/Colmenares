@@ -17,7 +17,7 @@
       
     </div>
     <div class="form-group required">
-      <label  class='control-label'>Slug</label>
+      <label  class='control-label'>Slug (*No user espacios ni caracteres especiales)</label>
       <input type="text" class="form-control" name="slug" placeholder="publicacion-numero">
     </div>
     <div class="form-group required">

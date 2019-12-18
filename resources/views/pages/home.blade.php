@@ -24,13 +24,11 @@
                       <h4> en el desarrollo de las Industrias creativas y culturales.</h4>
                     </div>
                   </div>
-                  <div class="carousel-item  ">
-                    <div class="img_bg" style="background-image:url('img/emprendedores.jpg')">
-
-                    </div>
+                  <div class="carousel-item">
+                    <div class="img_bg" style="background-image:url('img/slide_05.jpg')"></div>
                     <div class="carousel-caption  txt-orange  d-md-block">
-                      <h1>Somos 100%</h1>
-                      <h4>emprendedores y creativos</h4>
+                      <h1>Somos expertos</h1>
+                      <h4>en derecho de entretenimiento</h4>
                     </div>
                   </div>
                   <div class="carousel-item">
@@ -44,14 +42,16 @@
                       <div class="img_bg" style="background-image:url('img/fomentar.jpg')"></div>
                       <div class="carousel-caption  txt-orange  d-md-block">
                         <h1>Fomentamos el crecimiento</h1>
-                        <h4>de proyectos creativos, artísticos y culturale.</h4>
+                        <h4>de proyectos creativos, artísticos y culturales.</h4>
                       </div>
                     </div>
-                  <div class="carousel-item">
-                      <div class="img_bg" style="background-image:url('img/expertos.jpg')"></div>
+
+                    <div class="carousel-item  ">
+                      <div class="img_bg" style="background-image:url('img/emprendedores.jpg')">
+                      </div>
                       <div class="carousel-caption  txt-orange  d-md-block">
-                        <h1>Somos expertos</h1>
-                        <h4>en derecho de entretenimiento</h4>
+                        <h1>Somos 100%</h1>
+                        <h4>emprendedores y creativos</h4>
                       </div>
                     </div>
                 </div>
